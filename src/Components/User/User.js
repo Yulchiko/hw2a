@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from "../Users/App.module.css";
 
 const User = (props) => {
     const {getUserId, user} = props;
@@ -6,7 +7,7 @@ const User = (props) => {
     return (
         <div>
             {id}. {name} -- {username}, {email}
-            <button onClick={()=>getUserId(id)}> GetDetails </button>
+            <button className={styles.button} onClick={()=>getUserId(id)}> GetDetails </button>
         </div>
     );
 };

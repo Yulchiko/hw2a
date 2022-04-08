@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from "../Users/App.module.css";
 
 const UserDetails = (props) => {
     const {user, getUserPosts} = props;
     const {id, name, surname, email, address, phone} = user;
     return (
-        <div>
+        <div className={styles.name}>
             <div>id:{id}</div>
             <div>name:{name}</div>
             <div>surname:{surname}</div>
@@ -17,7 +18,7 @@ const UserDetails = (props) => {
                 <div>zipcode:{address.zipcode}</div>
                           </div>
             <div>phone:{phone}</div>
-            <button onClick={() => getUserPosts(user.id)}>get posts</button>
+            <button className={styles.userPost} onClick={() => getUserPosts(user.id)}>get posts</button>
         </div>
     );
 };
